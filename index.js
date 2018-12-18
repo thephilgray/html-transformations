@@ -1,11 +1,8 @@
 const fs = require('fs');
-const { promisify } = require('util');
 const trumpet = require('trumpet');
 const tr = trumpet();
 
 const hyperstream = require('hyperstream');
-
-const copyFile = promisify(fs.copyFile);
 
 const renderComponent = (src, dest, component, selector) => {
   return new Promise((resolve, reject) => {
